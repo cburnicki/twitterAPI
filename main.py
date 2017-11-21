@@ -27,9 +27,11 @@ api = tweepy.API(auth)
 
 i = 0
 
+
 for status in tweepy.Cursor(api.user_timeline, screen_name = 'tagesschau').items():
     # process status here
     i += 1
+    print status
     if i > 800:
         break
 
